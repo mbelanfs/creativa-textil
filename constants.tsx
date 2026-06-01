@@ -1,14 +1,8 @@
 import { Product, Service, Testimonial } from './types';
-
-// Centralized product loader: keep product data in `data/products.json`.
-// This file is loaded at build time. Edit `data/products.json` to add/update products.
-let EXTERNAL_PRODUCTS: any = null;
-try {
-  // eslint-disable-next-line @typescript-eslint/no-var-requires
-  EXTERNAL_PRODUCTS = require('./data/products.json');
-} catch (e) {
-  EXTERNAL_PRODUCTS = null;
-}
+// Static JSON import so the bundler inlines product data at build time.
+// resolveJsonModule is enabled in tsconfig.json.
+import productsData from './data/products.json';
+const EXTERNAL_PRODUCTS: any = productsData || null;
 
 const normalize = (arr: any[] = []): Product[] =>
   arr.map(p => ({
