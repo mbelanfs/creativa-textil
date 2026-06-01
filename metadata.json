@@ -1,0 +1,8 @@
+{
+  "name": "Creativa Textil Artesanal - Portfolio Premium",
+  "description": "Un portafolio online de alta calidad para una marca de artesanía textil, incluyendo colecciones de moda infantil (Dressitos), accesorios tradicionales (Fallastyle) y servicios de costura profesional.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
