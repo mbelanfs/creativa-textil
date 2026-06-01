@@ -1,25 +1,20 @@
 
-/**
- * Browser client: forwards prompt to serverless proxy at /api/gemini
- * so the GEMINI_API_KEY never ends up in the client bundle.
- */
+// Lightweight local fallback for artisan advice.
+// This avoids any external AI dependency. It returns a small, friendly message
+// based on the user's prompt.
 export const getArtisanAdvice = async (prompt: string) => {
-  try {
-    const resp = await fetch('/api/gemini', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt })
-    });
-
-    if (!resp.ok) {
-      console.error('Gemini proxy responded with', resp.status);
-      return 'Disculpe, parece que mi taller virtual está un poco saturado. ¿Podría consultarme de nuevo en un momento?';
-    }
-
-    const data = await resp.json();
-    return data?.text || '';
-  } catch (err) {
-    console.error('Error contacting Gemini proxy:', err);
-    return 'Disculpe, parece que mi taller virtual está un poco saturado. ¿Podría consultarme de nuevo en un momento?';
+  if (!prompt || !prompt.trim()) return 'Por favor escribe tu consulta.';
+  // Very small heuristic responses for common queries.
+  const q = prompt.toLowerCase();
+  if (q.includes('bolso') || q.includes('bag') || q.includes('bag')) {
+    return 'Para un bolso de seda, elige forro de algodón y remates reforzados; evita el contacto prolongado con agua.';
   }
+  if (q.includes('talla') || q.includes('size') || q.includes('medida')) {
+    return 'Mide la prenda en plano y compara con una prenda que te quede bien; para niños añade 2 cm de margen para crecimiento.';
+  }
+  if (q.includes('material') || q.includes('tejido') || q.includes('fabric')) {
+    return 'Las fibras naturales como lino y algodón respiran mejor; para piezas de ceremonia considera seda o brocado.';
+  }
+  // Default friendly reply
+  return 'Gracias por tu pregunta — en nuestro taller recomendamos materiales nobles y acabados artesanales; escríbenos más detalles para una respuesta personalizada.';
 };
