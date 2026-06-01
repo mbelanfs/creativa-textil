@@ -1,0 +1,45 @@
+# Run from project root (PowerShell)
+# 1) Quick checks
+git status --porcelain
+git branch --show-current
+
+# 2) Validate product data (if script exists)
+if (Test-Path .\scripts\validate-products.js) { node .\scripts\validate-products.js } else { Write-Output 'No validator script found: .\scripts\validate-products.js' }
+
+# 3) Local build + postbuild (will run postbuild script that copies images)
+npm run build
+
+# 4) Optional: preview locally (run after build)
+# npm run preview
+# open the preview URL shown by the command in your browser (e.g. http://localhost:4174/)
+
+# 5) Stage and commit your changes
+# - Stage everything (safe):
+git add -A
+
+# - Or stage a specific file (example):
+# git add data/products.json
+
+# 6) Commit (edit message as needed)
+git commit -m "chore: update site content"
+
+# If Git complains about identity (only run once to set):
+# git config --global user.name "Your Name"
+# git config --global user.email "you@example.com"
+
+# 7) Push to GitHub (this triggers Vercel if connected)
+git push origin main
+
+# 8) Quick verification
+git remote get-url origin
+git rev-parse HEAD
+
+# 9) Check Vercel dashboard for deployment status; optionally poll the live URL.
+# (If you have a VERCEL_URL or custom domain, you can test with Invoke-WebRequest)
+# Example:
+# Invoke-WebRequest -UseBasicParsing http://your-deployed-site.example -OutFile out.html; if ($?) { Write-Output 'Site reachable' } else { Write-Output 'Site not reachable yet' }
+
+# Tips:
+# - Run this file with: .\deploy-commands.txt opened and copy-paste commands into PowerShell, or run each step manually.
+# - Keep commits small and descriptive so rollbacks are easy.
+# - Use the validator before commit if you're editing product JSONs to avoid build-time errors.
