@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Product } from '../types';
 
 interface ProductCardProps {
@@ -9,6 +8,8 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) => {
   const [currentIdx, setCurrentIdx] = useState(0);
+  const touchStartX = useRef<number | null>(null);
+  const swipeDetected = useRef(false);
   const { name, description, price, image, images, category, categories, tag } = product;
   
   const productImages = images && images.length > 0 ? images : [image];
@@ -23,12 +24,27 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) => {
     setCurrentIdx((prev) => (prev - 1 + productImages.length) % productImages.length);
   };
 
+  const handlePointerDown = (e: React.PointerEvent) => { touchStartX.current = e.clientX; swipeDetected.current = false; };
+  const handlePointerUp = (e: React.PointerEvent) => {
+    if (touchStartX.current == null) return;
+    const delta = e.clientX - touchStartX.current;
+    if (Math.abs(delta) > 40) { swipeDetected.current = true; if (delta > 0) setCurrentIdx((prev) => (prev - 1 + productImages.length) % productImages.length); else setCurrentIdx((prev) => (prev + 1) % productImages.length); }
+    touchStartX.current = null;
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => { touchStartX.current = e.touches[0].clientX; swipeDetected.current = false; };
+  const handleTouchEnd = (e: React.TouchEvent) => { if (touchStartX.current == null) return; const endX = e.changedTouches[0].clientX; const delta = endX - touchStartX.current; if (Math.abs(delta) > 40) { swipeDetected.current = true; if (delta > 0) setCurrentIdx((prev) => (prev - 1 + productImages.length) % productImages.length); else setCurrentIdx((prev) => (prev + 1) % productImages.length); } touchStartX.current = null; };
+  
   return (
     <div className="group flex flex-col bg-white dark:bg-[#2a1f17] rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 border border-primary/5">
       {/* Image Container */}
       <div 
         className="relative aspect-[4/5] overflow-hidden bg-gray-100 dark:bg-black/20 cursor-pointer"
-        onClick={onSelect}
+        onClick={(e) => { if (swipeDetected.current) { swipeDetected.current = false; return; } onSelect?.(); }}
+        onPointerDown={handlePointerDown}
+        onPointerUp={handlePointerUp}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
       >
         <img 
           src={productImages[currentIdx]} 

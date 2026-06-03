@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Product } from '../types';
 
 interface ProductDetailProps {
@@ -9,6 +9,8 @@ interface ProductDetailProps {
 const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack }) => {
   const [activeImgIdx, setActiveImgIdx] = useState(0);
   const productImages = product.images && product.images.length > 0 ? product.images : [product.image];
+  const touchStartX = useRef<number | null>(null);
+  const swipeDetected = useRef(false);
 
   const categories = product.categories && product.categories.length > 0
     ? product.categories
@@ -18,6 +20,40 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const goPrev = () => setActiveImgIdx((prev) => (prev - 1 + productImages.length) % productImages.length);
+  const goNext = () => setActiveImgIdx((prev) => (prev + 1) % productImages.length);
+
+  const handlePointerDown = (e: React.PointerEvent) => {
+    touchStartX.current = e.clientX;
+    swipeDetected.current = false;
+  };
+
+  const handlePointerUp = (e: React.PointerEvent) => {
+    if (touchStartX.current == null) return;
+    const delta = e.clientX - touchStartX.current;
+    if (Math.abs(delta) > 40) {
+      swipeDetected.current = true;
+      if (delta > 0) goPrev(); else goNext();
+    }
+    touchStartX.current = null;
+  };
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    swipeDetected.current = false;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current == null) return;
+    const endX = e.changedTouches[0].clientX;
+    const delta = endX - touchStartX.current;
+    if (Math.abs(delta) > 40) {
+      swipeDetected.current = true;
+      if (delta > 0) goPrev(); else goNext();
+    }
+    touchStartX.current = null;
+  };
 
   return (
     <div className="relative z-0 min-h-screen bg-background-light dark:bg-background-dark pt-32 pb-40">
@@ -36,7 +72,13 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack }) => {
           <div className="w-full lg:w-1/2">
             <div className="flex flex-col gap-8">
               {/* Main Image */}
-              <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl bg-white dark:bg-white/5 border border-primary/5">
+              <div
+                className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl bg-white dark:bg-white/5 border border-primary/5 group"
+                onPointerDown={handlePointerDown}
+                onPointerUp={handlePointerUp}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
+              >
                 <img 
                   src={productImages[activeImgIdx]} 
                   alt={product.name} 
@@ -48,14 +90,14 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack }) => {
                 {productImages.length > 1 && (
                   <>
                     <button 
-                      onClick={() => setActiveImgIdx((prev) => (prev - 1 + productImages.length) % productImages.length)}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity z-20"
+                      onClick={() => { goPrev(); }}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20"
                     >
                       <span className="material-symbols-outlined !text-lg">chevron_left</span>
                     </button>
                     <button 
-                      onClick={() => setActiveImgIdx((prev) => (prev + 1) % productImages.length)}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity z-20"
+                      onClick={() => { goNext(); }}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20"
                     >
                       <span className="material-symbols-outlined !text-lg">chevron_right</span>
                     </button>
