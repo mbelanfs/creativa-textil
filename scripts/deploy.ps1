@@ -10,11 +10,17 @@ git status --porcelain
 git branch --show-current
 
 # 2) Optional validation
-if (Test-Path .\scripts\validate-products.js) {
+if (Test-Path .\scripts\validate-products.cjs) {
   Write-Host "Running products validator..."
-  node .\scripts\validate-products.js
+  node .\scripts\validate-products.cjs
+
+  if ($LASTEXITCODE -ne 0) {
+    Write-Error "Validation failed. Aborting deploy."
+    exit 1
+  }
+
 } else {
-  Write-Host "No validator script found: .\scripts\validate-products.js"
+  Write-Host "No validator script found: .\scripts\validate-products.cjs"
 }
 
 # 3) Build (production)
@@ -39,7 +45,10 @@ if ($changes) {
 
 # 6) Push to origin/main
 Write-Host "Pushing to origin/main..."
-if (-not (git push origin main)) {
+
+git push origin main
+
+if ($LASTEXITCODE -ne 0) {
   Write-Error "Git push failed. Check your credentials and remote settings."
   exit 1
 }
