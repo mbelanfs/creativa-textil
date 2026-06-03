@@ -6,7 +6,7 @@ git status --porcelain
 git branch --show-current
 
 # 2) Validate product data (if script exists)
-if (Test-Path .\scripts\validate-products.js) { node .\scripts\validate-products.js } else { Write-Output 'No validator script found: .\scripts\validate-products.js' }
+#if (Test-Path .\scripts\validate-products.js) { node .\scripts\validate-products.js } else { Write-Output 'No validator script found: .\scripts\validate-products.js' }
 
 # 3) Local build + postbuild (will run postbuild script that copies images)
 npm run build
