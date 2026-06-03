@@ -243,11 +243,80 @@ const App: React.FC = () => {
   const [isAiLoading, setIsAiLoading] = useState(false);
   const ENABLE_AI_ASSISTANT = false;
 
-  // When changing tabs via the navbar/footer, also clear any selected product
+  // History-aware navigation: push/pop state so browser back/forward works
   const handleTabChange = (tab: string) => {
+    const url = `#${tab}`;
+    try { window.history.pushState({ tab }, '', url); } catch(e) { /* ignore */ }
     setCurrentTab(tab);
     setSelectedProduct(null);
+    window.scrollTo(0, 0);
   };
+ 
+  const handleSelectProduct = (product: Product) => {
+    setSelectedProduct(product);
+    const url = `#product-${product.id}`;
+    try { window.history.pushState({ productId: product.id, tab: currentTab }, '', url); } catch (e) { /* ignore */ }
+    window.scrollTo(0, 0);
+  };
+ 
+  // Initialize from URL hash and listen for back/forward (popstate)
+  useEffect(() => {
+    const parseHash = () => {
+      const h = (window.location.hash || '').toString();
+      if (h.startsWith('#product-')) {
+        const id = h.replace('#product-', '');
+        const all = [...DRESSITOS_PRODUCTS, ...FALLASTYLE_PRODUCTS];
+        const p = all.find(x => x.id === id) || null;
+        setSelectedProduct(p);
+        if (p) {
+          setCurrentTab(p.categories && p.categories.length > 0 ? p.categories[0] : 'dressitos');
+          return;
+        }
+      }
+      if (h && h.length > 1 && !h.startsWith('#product-')) {
+        setSelectedProduct(null);
+        setCurrentTab(h.replace('#', ''));
+        return;
+      }
+      // default
+      setSelectedProduct(null);
+    };
+
+    // ensure initial history state aligns with current tab/hash
+    try {
+      const initialTab = window.location.hash ? window.location.hash.replace('#', '') : currentTab;
+      window.history.replaceState({ tab: initialTab }, '', window.location.hash || `#${initialTab}`);
+    } catch (e) { /* ignore */ }
+
+    parseHash();
+
+    const onPop = (e: PopStateEvent) => {
+      const s = (e.state || {});
+      if (s && s.productId) {
+        const all = [...DRESSITOS_PRODUCTS, ...FALLASTYLE_PRODUCTS];
+        const p = all.find(x => x.id === s.productId) || null;
+        setSelectedProduct(p);
+        setCurrentTab(s.tab || 'inicio');
+        return;
+      }
+      if (s && s.tab) {
+        setSelectedProduct(null);
+        setCurrentTab(s.tab);
+        return;
+      }
+      // fallback to hash parsing
+      parseHash();
+    };
+
+    const onHashChange = () => parseHash();
+
+    window.addEventListener('popstate', onPop);
+    window.addEventListener('hashchange', onHashChange);
+    return () => {
+      window.removeEventListener('popstate', onPop);
+      window.removeEventListener('hashchange', onHashChange);
+    };
+  }, []);
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -267,7 +336,7 @@ const App: React.FC = () => {
       return (
         <ProductDetail 
           product={selectedProduct} 
-          onBack={() => setSelectedProduct(null)} 
+          onBack={() => window.history.back()} 
         />
       );
     }
@@ -356,7 +425,7 @@ const App: React.FC = () => {
               subtitle: 'Complementos infantiles',
               img: '/images/products/dressitos/Dressitos_camisetafloresybolso_modelo_final.jpg'
             }}
-            onSelectProduct={setSelectedProduct}
+            onSelectProduct={handleSelectProduct}
           />
         );
       case 'fallastyle':
@@ -369,7 +438,7 @@ const App: React.FC = () => {
               subtitle: 'Vive las fiestas tradicionales con otro estilo',
               img: '/images/products/fallastyle/tela_fallera/Fallastyle_retal4.jpg'
             }}
-            onSelectProduct={setSelectedProduct}
+            onSelectProduct={handleSelectProduct}
           />
         );
       // case 'arreglos': //This builds up the "arreglos" page. It's only the page. The inset in homepage still shows even if this is commented out.
