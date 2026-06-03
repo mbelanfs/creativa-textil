@@ -46,10 +46,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) => {
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        <img 
-          src={productImages[currentIdx]} 
+        <img
+          src={productImages[currentIdx]}
           alt={`${name} - imagen ${currentIdx + 1}`}
-          className="h-full w-full object-cover transition-transform duration-[1.5s] group-hover:scale-110"
+          onLoad={() => { /* allow fade */ }}
+          className="h-full w-full object-cover transition-opacity duration-500 group-hover:scale-110 opacity-100"
           loading="lazy"
           key={currentIdx}
         />
@@ -57,15 +58,15 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) => {
         {/* Navigation Arrows (Visible on hover and if multiple images) */}
         {productImages.length > 1 && (
           <>
-            <button 
+            <button
               onClick={prevImage}
-              className="absolute left-4 top-1/2 -translate-y-1/2 size-8 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20"
+              className="absolute left-4 top-1/2 -translate-y-1/2 size-8 rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-md text-white flex items-center justify-center opacity-20 group-hover:opacity-100 transition-opacity z-20 shadow-sm"
             >
               <span className="material-symbols-outlined !text-sm">chevron_left</span>
             </button>
-            <button 
+            <button
               onClick={nextImage}
-              className="absolute right-4 top-1/2 -translate-y-1/2 size-8 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20"
+              className="absolute right-4 top-1/2 -translate-y-1/2 size-8 rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-md text-white flex items-center justify-center opacity-20 group-hover:opacity-100 transition-opacity z-20 shadow-sm"
             >
               <span className="material-symbols-outlined !text-sm">chevron_right</span>
             </button>

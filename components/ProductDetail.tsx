@@ -9,6 +9,7 @@ interface ProductDetailProps {
 const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack }) => {
   const [activeImgIdx, setActiveImgIdx] = useState(0);
   const productImages = product.images && product.images.length > 0 ? product.images : [product.image];
+  const [imgLoaded, setImgLoaded] = useState(true);
   const touchStartX = useRef<number | null>(null);
   const swipeDetected = useRef(false);
 
@@ -20,6 +21,11 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  useEffect(() => {
+    // trigger fade-out then wait for new image to load
+    setImgLoaded(false);
+  }, [activeImgIdx]);
 
   const goPrev = () => setActiveImgIdx((prev) => (prev - 1 + productImages.length) % productImages.length);
   const goNext = () => setActiveImgIdx((prev) => (prev + 1) % productImages.length);
@@ -79,25 +85,26 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack }) => {
                 onTouchStart={handleTouchStart}
                 onTouchEnd={handleTouchEnd}
               >
-                <img 
-                  src={productImages[activeImgIdx]} 
-                  alt={product.name} 
-                  className="w-full h-full object-cover transition-all duration-700"
+                <img
+                  src={productImages[activeImgIdx]}
+                  alt={product.name}
+                  onLoad={() => setImgLoaded(true)}
+                  className={`w-full h-full object-cover transition-opacity duration-500 ${imgLoaded ? 'opacity-100' : 'opacity-0'}`}
                   key={activeImgIdx}
                 />
                 
                 {/* Navigation Arrows */}
                 {productImages.length > 1 && (
                   <>
-                    <button 
+                    <button
                       onClick={() => { goPrev(); }}
-                      className="absolute left-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20"
+                      className="absolute left-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-md text-white flex items-center justify-center opacity-20 group-hover:opacity-100 transition-opacity z-30 shadow-md"
                     >
                       <span className="material-symbols-outlined !text-lg">chevron_left</span>
                     </button>
-                    <button 
+                    <button
                       onClick={() => { goNext(); }}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-white/20 hover:bg-white/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity z-20"
+                      className="absolute right-4 top-1/2 -translate-y-1/2 size-10 rounded-full bg-white/30 hover:bg-white/50 backdrop-blur-md text-white flex items-center justify-center opacity-20 group-hover:opacity-100 transition-opacity z-30 shadow-md"
                     >
                       <span className="material-symbols-outlined !text-lg">chevron_right</span>
                     </button>
