@@ -554,38 +554,53 @@ const App: React.FC = () => {
       case 'contacto':
         return (
           <div className="pt-40 px-6 pb-40 max-w-[1200px] mx-auto">
-             <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
-                <div>
-                   <h1 className="text-7xl font-display font-bold mb-12">Hablemos</h1>
-                   <div className="space-y-12">
-                      <div className="flex gap-4 lg:gap-8 items-center group">
-                        <div className="size-12 lg:size-16 rounded-3xl bg-primary/10 flex items-center justify-center text-primary">
-                          <span className="material-symbols-outlined text-2xl lg:text-3xl">
-                            mail
-                          </span>
-                        </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
+              <div>
+                <h1 className="text-7xl font-display font-bold mb-12">
+                  Hablemos
+                </h1>
 
-                        <div className="min-w-0">
-                          <p className="text-[10px] uppercase tracking-widest text-text-secondary mb-1">
-                            Email Directo
-                          </p>
+                <div className="space-y-12">
 
-                          <p className="text-lg lg:text-2xl font-bold break-words">
-                            creativatextilart@gmail.com
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex gap-8 items-center group">
-                        <div className="size-16 rounded-3xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
-                            <span className="material-symbols-outlined !text-3xl">location_on</span>
-                        </div>
-                        <div>
-                            <p className="text-[10px] uppercase tracking-widest text-text-secondary mb-1">Ubicación</p>
-                            <p className="text-2xl font-bold">Valencia, España</p>
-                        </div>
-                        </div>
-                   </div>
+                  {/* Email */}
+                  <div className="flex gap-4 lg:gap-8 items-center group">
+                    <div className="size-12 lg:size-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                      <span className="material-symbols-outlined text-2xl lg:text-3xl">
+                        mail
+                      </span>
+                    </div>
+
+                    <div className="min-w-0">
+                      <p className="text-[10px] uppercase tracking-widest text-text-secondary mb-1">
+                        Email Directo
+                      </p>
+
+                      <p className="text-lg lg:text-2xl font-bold break-words">
+                        creativatextilart@gmail.com
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Location */}
+                  <div className="flex gap-4 lg:gap-8 items-center group">
+                    <div className="size-12 lg:size-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                      <span className="material-symbols-outlined text-2xl lg:text-3xl">
+                        location_on
+                      </span>
+                    </div>
+
+                    <div className="min-w-0">
+                      <p className="text-[10px] uppercase tracking-widest text-text-secondary mb-1">
+                        Ubicación
+                      </p>
+
+                      <p className="text-lg lg:text-2xl font-bold">
+                        Valencia, España
+                      </p>
+                    </div>
+                  </div>
                 </div>
+              </div>
 
                 {/* Esta parte es el formulario de contacto. El diseño es simple, con campos para nombre, email y mensaje, y un botón para enviar. Al enviar el formulario, se muestra una alerta de agradecimiento. En una implementación real, este formulario debería conectarse a un backend para procesar los mensajes de los usuarios. Falta configurar el backend para manejar los envíos de mensajes. La idea es hacerlo con EmailJS.
                 <div className="bg-white dark:bg-white/5 p-12 rounded-[3rem] shadow-2xl border border-primary/5">
