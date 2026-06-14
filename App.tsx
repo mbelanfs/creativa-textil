@@ -558,12 +558,22 @@ const App: React.FC = () => {
                 <div>
                    <h1 className="text-7xl font-display font-bold mb-12">Hablemos</h1>
                    <div className="space-y-12">
-                      <div className="flex gap-8 items-center group">
-                         <div className="size-16 rounded-3xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"><span className="material-symbols-outlined !text-3xl">mail</span></div>
-                         <div>
-                            <p className="text-[10px] uppercase tracking-widest text-text-secondary mb-1">Email Directo</p>
-                            <p className="text-2xl font-bold">creativatextilart@gmail.com</p>
-                         </div>
+                      <div className="flex gap-4 lg:gap-8 items-center group">
+                        <div className="size-12 lg:size-16 rounded-3xl bg-primary/10 flex items-center justify-center text-primary">
+                          <span className="material-symbols-outlined text-2xl lg:text-3xl">
+                            mail
+                          </span>
+                        </div>
+
+                        <div className="min-w-0">
+                          <p className="text-[10px] uppercase tracking-widest text-text-secondary mb-1">
+                            Email Directo
+                          </p>
+
+                          <p className="text-lg lg:text-2xl font-bold break-words">
+                            creativatextilart@gmail.com
+                          </p>
+                        </div>
                       </div>
                       <div className="flex gap-8 items-center group">
                          <div className="size-16 rounded-3xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"><span className="material-symbols-outlined !text-3xl">location_on</span></div>
