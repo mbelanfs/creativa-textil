@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
     // proxy when available, but by default we keep things static and keyless.
     return {
       server: {
-        port: 3000,
+        port: 5173,
         host: '0.0.0.0',
       },
       plugins: [react()],

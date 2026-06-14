@@ -478,7 +478,7 @@ const App: React.FC = () => {
              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 lg:gap-x-4 items-start py-24">
                 <div className="relative">
                    <div className="aspect-[4/5] max-w-[420px] rounded-[4rem] overflow-hidden shadow-2xl relative z-10 transition-transform duration-700 hover:scale-[1.02]">
-                     <img src="/images/team/costurera_portrait.png" className="w-full h-full object-cover" alt="Encarna Guadas Sanz" />
+                     <img src="/images/team/costurera_portrait_2.png" className="w-full h-full object-cover" alt="Encarna Guadas Sanz" />
                    </div>
                 </div>
                 <div>
