@@ -3,7 +3,7 @@
     {
       "id": "d1",
       "name": "Conjunto cuadros verdes",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_conjuntobebecuadrosverdes_final.jpg",
       "images": [
@@ -16,7 +16,7 @@
     {
       "id": "d2",
       "name": "Conjunto azul marino",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_conjunto_floral_azulmarino2_final.jpg",
       "images": [],
@@ -26,7 +26,7 @@
     {
       "id": "d3",
       "name": "Falda cuadros",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_faldacuadros_final.jpg",
       "images": [],
@@ -36,7 +36,7 @@
     {
       "id": "d4",
       "name": "Camiseta bolsito verde",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_Camiseta con aplique a festón y bolsito a juego  en verde agua_final.jpg",
       "images": [],
@@ -46,7 +46,7 @@
     {
       "id": "d5",
       "name": "Camiseta bolsito rosa",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_camiseta con aplique a festón y bolsito a juego en fucsia_final.jpg",
       "images": [],
@@ -56,7 +56,7 @@
     {
       "id": "d6",
       "name": "Camiseta flores y bolso",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_camisetafloresybolso_final.jpg",
       "images": [
@@ -69,7 +69,7 @@
     {
       "id": "d7",
       "name": "Conjunto rosa floral",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_Conjunto_floresrosas_final.jpg",
       "images": [],
@@ -79,7 +79,7 @@
     {
       "id": "d8",
       "name": "Mochila y saco para puntas",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_mochila infantil y saco puntas_final.jpg",
       "images": [],
@@ -89,7 +89,7 @@
     {
       "id": "d9",
       "name": "Saco para puntas y camiseta",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_Saco puntas y camiseta a juego con apliques a festón_final.jpg",
       "images": [
@@ -102,7 +102,7 @@
     {
       "id": "d10",
       "name": "Torerita",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_torerita_final.jpg",
       "images": [],
@@ -112,7 +112,7 @@
     {
       "id": "d11",
       "name": "Saco Harry Potter",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_mochila_harrypotter_final.jpg",
       "images": [
@@ -125,7 +125,7 @@
     {
       "id": "d12",
       "name": "Saco Spider-man",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_mochila_spiderman_final.jpg",
       "images": [],
@@ -135,7 +135,7 @@
     {
       "id": "d13",
       "name": "Pajarita",
-      "description": "Description: Pendiente",
+      "description": "",
       "price": 28.0,
       "image": "/images/products/dressitos/Dressitos_pajarita1_final.jpg",
       "images": [],
@@ -148,7 +148,7 @@
     {
       "id": "f1",
       "name": "Bolso Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/bolsos/Fallastyle_Retalbolso_1.jpg",
       "images": [
@@ -166,7 +166,7 @@
     {
       "id": "f2",
       "name": "Bolso Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/bolsos/Fallastyle_Retalbolso_4.jpg",
       "images": [
@@ -181,7 +181,7 @@
     {
       "id": "f3",
       "name": "Bolso Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/bolsos/Fallastyle_Retalbolso_5.jpg",
       "images": [
@@ -196,7 +196,7 @@
     {
       "id": "f4",
       "name": "Bolso Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/bolsos/Fallastyle_Retalbolso_2.jpg",
       "images": [
@@ -213,7 +213,7 @@
     {
       "id": "f5",
       "name": "Bolso Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/bolsos/Fallastyle_Retalbolso_6.jpg",
       "images": [
@@ -229,7 +229,7 @@
     {
       "id": "f6",
       "name": "Bolso Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/bolsos/Fallastyle_Retalbolso_3.jpg",
       "images": [
@@ -246,7 +246,7 @@
     {
       "id": "f7",
       "name": "Bolso Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/bolsos/Fallastyle_Retalbolso_8.jpg",
       "images": [
@@ -262,7 +262,7 @@
     {
       "id": "f8",
       "name": "Bolso Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/bolsos/Fallastyle_Retalbolso_7.jpg",
       "images": [
@@ -278,7 +278,7 @@
     {
       "id": "f9",
       "name": "Saco Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalSaco1.jpg",
       "images": [
@@ -294,7 +294,7 @@
     {
       "id": "f10",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote1.jpg",
       "images": [
@@ -309,7 +309,7 @@
     {
       "id": "f11",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote2.jpg",
       "images": [
@@ -324,7 +324,7 @@
     {
       "id": "f12",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote3.jpg",
       "images": [
@@ -339,7 +339,7 @@
     {
       "id": "f13",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote4.jpg",
       "images": [
@@ -354,7 +354,7 @@
     {
       "id": "f14",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote5.jpg",
       "images": [
@@ -369,7 +369,7 @@
     {
       "id": "f15",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote6.jpg",
       "images": [
@@ -384,7 +384,7 @@
     {
       "id": "f16",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote7.jpg",
       "images": [
@@ -399,7 +399,7 @@
     {
       "id": "f17",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote8.jpg",
       "images": [
@@ -414,7 +414,7 @@
     {
       "id": "f18",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote9.jpg",
       "images": [
@@ -429,7 +429,7 @@
     {
       "id": "f19",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote10.jpg",
       "images": [
@@ -444,7 +444,7 @@
     {
       "id": "f20",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote11.jpg",
       "images": [
@@ -459,7 +459,7 @@
     {
       "id": "f21",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote12.jpg",
       "images": [
@@ -474,7 +474,7 @@
     {
       "id": "f22",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote13.jpg",
       "images": [
@@ -489,7 +489,7 @@
     {
       "id": "f23",
       "name": "Totebag Retal Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/tela_fallera/toteBags_sacos/Fallastyle_RetalTote14.jpg",
       "images": [
@@ -504,7 +504,7 @@
     {
       "id": "f24",
       "name": "Buff Morellana",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 12.0,
       "image": "/images/products/fallastyle/manta_morellana/Fallastyle_Morellana_braga_vista3.jpg",
       "images": [
@@ -520,7 +520,7 @@
     {
       "id": "f25",
       "name": "Saco Morellana",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/manta_morellana/Fallastyle_morellana_saco_final.jpg",
       "images": [
@@ -536,7 +536,7 @@
     {
       "id": "f26",
       "name": "Saco y monedero Morellana",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/manta_morellana/Fallastyle_Morellanasaco_bolsito__final.jpg",
       "images": [
@@ -552,7 +552,7 @@
     {
       "id": "f27",
       "name": "Conjunto Morellana",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/manta_morellana/Fallastyle_conjuntoMorellana_2_final.jpg",
       "images": [
@@ -568,7 +568,7 @@
     {
       "id": "f28",
       "name": "Riñonera Morellana",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/manta_morellana/Fallastyle_morellana_rinonera_final.jpg",
       "images": [
@@ -583,7 +583,7 @@
     {
       "id": "f29",
       "name": "Fundas Móvil Morellana",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/manta_morellana/Fallastyle_bolsitos_Morellana_final.jpg",
       "images": [
@@ -600,7 +600,7 @@
     {
       "id": "f30",
       "name": "Buff Pañuelo Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/Pañuelo_fallero/Fallasstyle_panuelo_item2.jpg",
       "images": [
@@ -615,7 +615,7 @@
     {
       "id": "f31",
       "name": "Saco Pañuelo Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/Pañuelo_fallero/Fallasstyle_panuelo_item3.jpg",
       "images": [
@@ -632,7 +632,7 @@
     {
       "id": "f32",
       "name": "Saco Pañuelo Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/Pañuelo_fallero/Fallasstyle_panuelo_item6.jpg",
       "images": [
@@ -647,7 +647,7 @@
     {
       "id": "f33",
       "name": "Saco y mondero Pañuelo Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/Pañuelo_fallero/Fallasstyle_panuelo_item1.jpg",
       "images": [
@@ -665,7 +665,7 @@
     {
       "id": "f34",
       "name": "Bolso Pañuelo Fallero",
-      "description": "Description: Pendiente.",
+      "description": "",
       "price": 15.0,
       "image": "/images/products/fallastyle/Pañuelo_fallero/Fallasstyle_panuelo_item5.jpg",
       "images": [
