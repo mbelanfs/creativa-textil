@@ -107,10 +107,10 @@ const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
               </button>
             ))}
           </div>
-          <div className="mt-auto text-center">
+          {/* <div className="mt-auto text-center">
             <p className="text-text-secondary uppercase tracking-widest text-xs mb-4">Atención bajo cita previa</p>
             <p className="font-bold text-xl">+34 600 000 000</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

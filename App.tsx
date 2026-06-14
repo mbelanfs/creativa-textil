@@ -483,7 +483,7 @@ const App: React.FC = () => {
                 </div>
                 <div>
                    <span className="text-primary font-black uppercase tracking-[0.4em] text-[14px] mb-6 block">Maestra Costurera</span>
-                   <h1 className="text-4xl font-display font-bold mb-8">Encarna Guadas Sanz</h1>
+                   <h1 className="text-4xl font-display font-bold mb-8">Costurera</h1>
                    <div className="space-y-6 text-lg text-text-secondary leading-relaxed text-justify">
                      <p>Desde la adolescencia fui testigo de la labor y dedicación al mundo de la confección a través de mi madre… Este proyecto es un homenaje a ella, que no solo crió a cuatro hijos, sino que trabajó como costurera para contribuir a la economía familiar.</p>
                      <p>Horas y horas detrás de la máquina de coser, puntada a puntada, sus proyectos tomaban forma, y yo, sin darme cuenta, mientras crecía, no era consciente de que esa tarea en un futuro sería parte importante de mi vida. Ciertamente, hoy es una tarea que desempeño con ilusión, y todo lo que inconscientemente fui aprendiendo sale a la luz de forma mágica.</p>
