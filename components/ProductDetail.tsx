@@ -167,9 +167,9 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ product, onBack }) => {
             </div>
 
             <div className="prose prose-stone dark:prose-invert max-w-none">
-              <p className="text-xl font-display text-text-main dark:text-gray-200 leading-relaxed italic mb-8">
+              {/* <p className="text-xl font-display text-text-main dark:text-gray-200 leading-relaxed italic mb-8">
                 "{product.description}"
-              </p>
+              </p> */}
               {/* // This is a placeholder for the product details. You can replace it with actual details from the product object when available. */}
               {/* <div className="bg-white dark:bg-white/5 p-8 rounded-[2rem] border border-primary/10 mb-12">
                 <h3 className="text-sm font-black uppercase tracking-widest mb-4 flex items-center gap-2">

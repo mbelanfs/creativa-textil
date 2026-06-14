@@ -111,9 +111,9 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) => {
           </span> */}
         </div>
         
-        <p className="text-xs text-text-secondary dark:text-gray-400 mb-6 line-clamp-2 leading-relaxed italic">
+        {/* <p className="text-xs text-text-secondary dark:text-gray-400 mb-6 line-clamp-2 leading-relaxed italic">
           "{description}"
-        </p>
+        </p> */}
 
         <button 
           onClick={onSelect}
