@@ -576,12 +576,14 @@ const App: React.FC = () => {
                         </div>
                       </div>
                       <div className="flex gap-8 items-center group">
-                         <div className="size-16 rounded-3xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500"><span className="material-symbols-outlined !text-3xl">location_on</span></div>
-                         <div>
+                        <div className="size-16 rounded-3xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                            <span className="material-symbols-outlined !text-3xl">location_on</span>
+                        </div>
+                        <div>
                             <p className="text-[10px] uppercase tracking-widest text-text-secondary mb-1">Ubicación</p>
                             <p className="text-2xl font-bold">Valencia, España</p>
-                         </div>
-                      </div>
+                        </div>
+                        </div>
                    </div>
                 </div>
 
