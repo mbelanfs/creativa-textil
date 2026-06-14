@@ -70,9 +70,6 @@ const Navbar: React.FC<NavbarProps> = ({ currentTab, onTabChange }) => {
 
           {/* Action Controls */}
           <div className="flex items-center gap-6">
-            <button className="hidden md:block hover:text-primary transition-colors">
-              <span className="material-symbols-outlined">search</span>
-            </button>
             <button 
               className="lg:hidden flex items-center justify-center"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
