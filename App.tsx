@@ -475,15 +475,15 @@ const App: React.FC = () => {
         return (
           <div className="pt-40 px-6 pb-40 max-w-[1200px] mx-auto">
             
-             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 lg:gap-x-4 items-start py-24">
+             <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-y-0 gap-x-3 lg:gap-x-4 items-start py-24">
                 <div className="relative">
-                   <div className="aspect-[4/5] max-w-[420px] rounded-[4rem] overflow-hidden shadow-2xl relative z-10 transition-transform duration-700 hover:scale-[1.02]">
+                   <div className="aspect-[4/5] max-w-[280px] lg:max-w-[420px] rounded-[4rem] overflow-hidden shadow-2xl relative z-10 transition-transform duration-700 hover:scale-[1.02]">
                      <img src="/images/team/costurera_portrait_2.png" className="w-full h-full object-cover" alt="Encarna Guadas Sanz" />
                    </div>
                 </div>
                 <div>
                    <span className="text-primary font-black uppercase tracking-[0.4em] text-[14px] mb-6 block">Maestra Costurera</span>
-                   <h1 className="text-6xl font-display font-bold mb-8">Encarna Guadas Sanz</h1>
+                   <h1 className="text-4xl font-display font-bold mb-8">Encarna Guadas Sanz</h1>
                    <div className="space-y-6 text-lg text-text-secondary leading-relaxed text-justify">
                      <p>Desde la adolescencia fui testigo de la labor y dedicación al mundo de la confección a través de mi madre… Este proyecto es un homenaje a ella, que no solo crió a cuatro hijos, sino que trabajó como costurera para contribuir a la economía familiar.</p>
                      <p>Horas y horas detrás de la máquina de coser, puntada a puntada, sus proyectos tomaban forma, y yo, sin darme cuenta, mientras crecía, no era consciente de que esa tarea en un futuro sería parte importante de mi vida. Ciertamente, hoy es una tarea que desempeño con ilusión, y todo lo que inconscientemente fui aprendiendo sale a la luz de forma mágica.</p>
@@ -510,9 +510,9 @@ const App: React.FC = () => {
                 </div>
              </div> */}
 
-             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-3 lg:gap-x-4 items-start py-24">
+             <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-y-0 gap-x-3 lg:gap-x-4 items-start py-24">
                 <div className="relative">
-                   <div className="aspect-[4/5] max-w-[420px] rounded-[4rem] overflow-hidden shadow-2xl relative z-10 transition-transform duration-700 hover:scale-[1.02]">
+                   <div className="aspect-[4/5] max-w-[280px] lg:max-w-[420px] rounded-[4rem] overflow-hidden shadow-2xl relative z-10 transition-transform duration-700 hover:scale-[1.02]">
                      <img src="/images/team/costurera_taller.png" className="w-full h-full object-cover" alt="Encarna Guadas Sanz" />
                    </div>
                 </div>
