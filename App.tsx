@@ -373,16 +373,15 @@ const App: React.FC = () => {
                 </div>
                 <div>
                    <span className="text-primary font-black uppercase tracking-[0.4em] text-[10px] mb-6 block">El Proceso Artesano</span>
-                   <h2 className="text-5xl font-display font-bold mb-10 leading-tight text-text-main dark:text-white">Una experiencia diseñada <br/> solo para ti</h2>
+                   <h2 className="text-5xl font-display font-bold mb-10 leading-tight text-text-main dark:text-white">Una experiencia diseñada solo para ti</h2>
                    <p className="text-lg text-text-secondary dark:text-gray-300 mb-12 leading-relaxed">
-                     Entendemos la moda como una extensión de tu personalidad. En el servicio "A tu medida", no hay límites. Desde la elección inicial de la seda valenciana o el lino más puro, hasta el último ajuste en la sisa, cada detalle se supervisa personalmente por Elvira.
+                     En el servicio "A tu medida", cada detalle se supervisa personalmente por la costurera.
                    </p>
                    <ul className="space-y-6 mb-12">
                      {[
-                       'Diseño de patrón exclusivo según tu silueta',
-                       'Acceso a muestrarios de sedas de edición limitada',
-                       'Dos a tres pruebas de ajuste en nuestro atelier',
-                       'Acabados a mano con técnicas de alta costura'
+                       'Diseño de patrón personalizado',
+                       'Dos a tres pruebas de ajuste en el taller',
+                       'Acabados a mano, si así lo requiere la prenda',
                      ].map((item, idx) => (
                        <li key={idx} className="flex gap-4 items-start">
                          <span className="material-symbols-outlined text-primary">verified</span>
@@ -407,7 +406,7 @@ const App: React.FC = () => {
               </div>
 
               <div className="bg-primary/5 rounded-[4rem] p-16 md:p-24 text-center border border-primary/10 shadow-inner">
-                <h3 className="text-4xl font-display font-bold mb-8 italic">"La verdadera elegancia reside en lo que está hecho con calma."</h3>
+                {/* <h3 className="text-4xl font-display font-bold mb-8 italic">"La verdadera elegancia reside en lo que está hecho con calma."</h3> */}
                 <p className="max-w-2xl mx-auto text-lg text-text-secondary dark:text-gray-300 mb-12">
                   ¿Tienes una ocasión especial o buscas esa prenda única que no encuentras en las tiendas? Permíteme asesorarte sin compromiso.
                 </p>
