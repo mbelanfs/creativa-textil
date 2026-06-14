@@ -475,8 +475,8 @@ const App: React.FC = () => {
         return (
           <div className="pt-40 px-6 pb-40 max-w-[1200px] mx-auto">
             
-             <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-y-0 gap-x-3 lg:gap-x-4 items-start py-24">
-                <div className="relative">
+             <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-y-0 gap-x-8 items-start py-10 lg:py-24">
+                <div className="relative flex justify-center lg:justify-start">
                    <div className="aspect-[4/5] max-w-[280px] lg:max-w-[420px] rounded-[4rem] overflow-hidden shadow-2xl relative z-10 transition-transform duration-700 hover:scale-[1.02]">
                      <img src="/images/team/costurera_portrait_2.png" className="w-full h-full object-cover" alt="Encarna Guadas Sanz" />
                    </div>
@@ -510,8 +510,8 @@ const App: React.FC = () => {
                 </div>
              </div> */}
 
-             <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-y-0 gap-x-3 lg:gap-x-4 items-start py-24">
-                <div className="relative">
+             <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 lg:gap-y-0 gap-x-8 items-start py-10 lg:py-24">
+                <div className="relative flex justify-center lg:justify-start">
                    <div className="aspect-[4/5] max-w-[280px] lg:max-w-[420px] rounded-[4rem] overflow-hidden shadow-2xl relative z-10 transition-transform duration-700 hover:scale-[1.02]">
                      <img src="/images/team/costurera_taller.png" className="w-full h-full object-cover" alt="Encarna Guadas Sanz" />
                    </div>
