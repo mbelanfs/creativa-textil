@@ -173,7 +173,7 @@ const Home: React.FC<{ onNavigate: (tab: string) => void }> = ({ onNavigate }) =
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background-light/40 to-background-light dark:via-background-dark/60 dark:to-background-dark z-[1]" />
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-[1200px]">
-        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-primary mb-6 animate-reveal">Desde 2012 · Valencia</span>
+        <span className="text-[10px] font-black uppercase tracking-[0.5em] text-primary mb-6 animate-reveal">Valencia</span>
         <h1 className="text-5xl sm:text-7xl lg:text-[7rem] font-display font-black leading-none mb-24 animate-reveal [animation-delay:200ms] drop-shadow-xl text-display">
           Creativa Textil <br/> <span className="text-primary italic font-light">Artesanal</span>
         </h1>

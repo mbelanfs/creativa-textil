@@ -23,3 +23,7 @@ Prerequisites: Node.js
 - Images must be placed under `images/` following the existing structure and will be copied into the production `dist/` by the postbuild script.
 
 The project no longer uses any external AI service by default; any previous AI proxy was removed to keep the deployment simple.
+
+
+## Run the deploy function: 
+   npm run deploy:quick
