@@ -26,4 +26,4 @@ The project no longer uses any external AI service by default; any previous AI p
 
 
 ## Run the deploy function: 
-   npm run deploy:quick
+npm run deploy:quick

@@ -141,6 +141,16 @@
       "images": [],
       "categories": ["Otros"],
       "tag": "Popular"
+    },
+    {
+      "id": "d14",
+      "name": "Diadema",
+      "description": "Description: Pendiente",
+      "price": 28.0,
+      "image": "/images/products/dressitos/20260711/3M.jpg",
+      "images": ["/images/products/dressitos/20260711/3M.jpg", "/images/products/dressitos/20260711/3M (AI Fashion Models).jpg"],
+      "categories": ["Niña"],
+      "tag": "Popular"
     }
   ],
   "FALLASTYLE_PRODUCTS": [
@@ -660,8 +670,7 @@
 
       "categories": ["Sacos", "Tela Pañuelo Fallero"],
       "tag": "Best Seller"
-    },  
-    
+    },
     {
       "id": "f34",
       "name": "Bolso Pañuelo Fallero",
@@ -675,6 +684,199 @@
       ],
 
       "categories": ["Sacos", "Tela Pañuelo Fallero"],
+      "tag": "Best Seller"
+    },
+    {
+      "id": "f35",
+      "name": "Bolso Pañuelo Fallero",
+      "description": "Description: Pendiente.",
+      "price": 15.0,
+      "image": "/images/products/fallastyle/20260711/1M.jpg",
+      "images": [
+        "/images/products/fallastyle/20260711/1M.jpg",
+        "/images/products/fallastyle/20260711/1M (AI Fashion Models).jpg"
+
+
+      ],
+
+      "categories": ["Sacos", "Tela Pañuelo Fallero"],
+      "tag": "Best Seller"
+    },
+    {
+      "id": "f36",
+      "name": "Bolso Pañuelo Fallero",
+      "description": "Description: Pendiente.",
+      "price": 15.0,
+      "image": "/images/products/fallastyle/20260711/2M.jpg",
+      "images": [
+        "/images/products/fallastyle/20260711/2M_2.jpg",
+        "/images/products/fallastyle/20260711/2M_2 (AI Fashion Models).jpg"
+
+
+      ],
+
+      "categories": ["Sacos", "Tela Pañuelo Fallero"],
+      "tag": "Best Seller"
+    },
+    {
+      "id": "f37",
+      "name": "Bolso Pañuelo Fallero",
+      "description": "Description: Pendiente.",
+      "price": 15.0,
+      "image": "/images/products/fallastyle/20260711/1B.jpg",
+      "images": [
+        "/images/products/fallastyle/20260711/1B.jpg",
+        "/images/products/fallastyle/20260711/1B (AI Fashion Models).jpg"
+
+
+      ],
+
+      "categories": ["Bolsos"],
+      "tag": "Best Seller"
+    },
+    {
+      "id": "f38",
+      "name": "Bolso Pañuelo Fallero",
+      "description": "Description: Pendiente.",
+      "price": 15.0,
+      "image": "/images/products/fallastyle/20260711/2B.jpg",
+      "images": [
+        "/images/products/fallastyle/20260711/2B.jpg",
+        "/images/products/fallastyle/20260711/2B (AI Fashion Models) 2.jpg",
+        "/images/products/fallastyle/20260711/2B (AI Fashion Models).jpg"
+
+
+      ],
+
+      "categories": ["Bolsos"],
+      "tag": "Best Seller"
+    },
+    {
+      "id": "f39",
+      "name": "Bolso Pañuelo Fallero",
+      "description": "Description: Pendiente.",
+      "price": 15.0,
+      "image": "/images/products/fallastyle/20260711/3B.jpg",
+      "images": [
+        "/images/products/fallastyle/20260711/3B.jpg",
+        "/images/products/fallastyle/20260711/3B (AI Fashion Models).jpg",
+        "/images/products/fallastyle/20260711/3B (AI Fashion Models) 2.jpg",
+        "/images/products/fallastyle/20260711/3B (AI Fashion Models) 3.jpg"
+
+
+      ],
+
+      "categories": ["Bolsos"],
+      "tag": "Best Seller"
+    },
+    {
+      "id": "f40",
+      "name": "Bolso Pañuelo Fallero",
+      "description": "Description: Pendiente.",
+      "price": 15.0,
+      "image": "/images/products/fallastyle/20260711/4B.jpg",
+      "images": [
+        "/images/products/fallastyle/20260711/4B.jpg",
+        "/images/products/fallastyle/20260711/4B (AI Fashion Models) 2.jpg"
+
+
+      ],
+
+      "categories": ["Bolsos"],
+      "tag": "Best Seller"
+    },
+    {
+      "id": "f41",
+      "name": "Bolso Pañuelo Fallero",
+      "description": "Description: Pendiente.",
+      "price": 15.0,
+      "image": "/images/products/fallastyle/20260711/5B.jpg",
+      "images": [
+        "/images/products/fallastyle/20260711/5B.jpg",
+        "/images/products/fallastyle/20260711/5B (AI Fashion Models).jpg",
+        "/images/products/fallastyle/20260711/5B (AI Fashion Models) 2.jpg",
+        "/images/products/fallastyle/20260711/5B (AI Fashion Models) 3.jpg"
+
+
+      ],
+
+      "categories": ["Bolsos"],
+      "tag": "Best Seller"
+    },
+    {
+      "id": "f42",
+      "name": "Totebag Retal Fallero",
+      "description": "Description: Pendiente.",
+      "price": 15.0,
+      "image": "/images/products/fallastyle/20260711/1T.jpg",
+      "images": [
+        "/images/products/fallastyle/20260711/1T.jpg",
+        "/images/products/fallastyle/20260711/1T (AI Fashion Models).jpg"
+
+      ],
+      "categories": ["Totebags"],
+
+      "tag": "Best Seller"
+    },
+    {
+      "id": "f43",
+      "name": "Totebag Retal Fallero",
+      "description": "Description: Pendiente.",
+      "price": 15.0,
+      "image": "/images/products/fallastyle/20260711/2T.jpg",
+      "images": [
+        "/images/products/fallastyle/20260711/2T.jpg",
+        "/images/products/fallastyle/20260711/2T (AI Fashion Models).jpg"
+
+      ],
+      "categories": ["Totebags"],
+
+      "tag": "Best Seller"
+    },
+    {
+      "id": "f44",
+      "name": "Totebag Retal Fallero",
+      "description": "Description: Pendiente.",
+      "price": 15.0,
+      "image": "/images/products/fallastyle/20260711/3T.jpg",
+      "images": [
+        "/images/products/fallastyle/20260711/3T.jpg",
+        "/images/products/fallastyle/20260711/3T (AI Fashion Models).jpg"
+
+      ],
+      "categories": ["Totebags"],
+
+      "tag": "Best Seller"
+    },
+    {
+      "id": "f45",
+      "name": "Bolso Pañuelo Fallero",
+      "description": "Description: Pendiente.",
+      "price": 15.0,
+      "image": "/images/products/fallastyle/20260711/6B.jpg",
+      "images": [
+        "/images/products/fallastyle/20260711/6B.jpg",
+        "/images/products/fallastyle/20260711/6B (AI Fashion Models).jpg"
+
+
+      ],
+
+      "categories": ["Bolsos"],
+      "tag": "Best Seller"
+    },
+    {
+      "id": "f46",
+      "name": "Bolso Pañuelo Fallero",
+      "description": "Description: Pendiente.",
+      "price": 15.0,
+      "image": "/images/products/fallastyle/20260711/7B.jpg",
+      "images": [
+        "/images/products/fallastyle/20260711/7B.jpg"
+
+
+      ],
+
+      "categories": ["Bolsos"],
       "tag": "Best Seller"
     }
   ]
